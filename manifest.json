@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+  "name": "Colour Addresses",
+  "version": "1.0.6",
+  "icons": {
+    "32": "icons/icon-32.png",
+    "64": "icons/icon-64.png"
+  },
+  "description": "This extension changes internal address colours to blue and external to red in the compose message box (new mail or reply).\n\nIt is designed to prevent accidentally sending sensitive data to external addresses.\n\nAn internal address is defined as being sent from the same domain as your email address, so use with gmail, protonmail etc is not reccomended.",
+  "author": "Tim O'Loghlin",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "colour-addresses@eidotech.de",
+      "strict_min_version": "128.0",
+      "strict_max_version": "153.*"
+    }
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [],
+  "experiment_apis": {
+    "heaExperiment": {
+      "schema": "api/schema.json",
+      "parent": {
+        "scopes": ["addon_parent"],
+        "paths": [["heaExperiment"]],
+        "script": "api/implementation.js"
+      }
+    }
+  }
+}

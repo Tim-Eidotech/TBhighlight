@@ -1,0 +1,14 @@
+[
+  {
+    "namespace": "heaExperiment",
+    "description": "Internal experiment API for Highlight External Addresses.",
+    "functions": [
+      {
+        "name": "init",
+        "type": "function",
+        "description": "Register the compose-window watcher. Called once from background.js at startup.",
+        "parameters": []
+      }
+    ]
+  }
+]
