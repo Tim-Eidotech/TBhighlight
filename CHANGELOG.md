@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.7] - 2026-06-09
+- Rewrite without Experiment API (Thunderbird gallery no longer accepts new Experiment API submissions)
+- Replace `heaExperiment` / `ExtensionSupport.registerWindowListener` with a `compose_scripts` content script
+- Sender domain resolved via `browser.compose.getComposeDetails()` instead of `gCurrentIdentity`
+- Shadow DOM traversal uses `.shadowRoot` / `wrappedJSObject.openOrClosedShadowRoot` fallback chain
+
 ## [1.0.6] - 2026-06-08
 - Extend compatibility to Thunderbird 153.*
 - Remove orphaned `compose.js` (unused since 1.0.4 architecture switch to Experiment API)

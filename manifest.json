@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Colour Addresses",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "icons": {
     "32": "icons/icon-32.png",
     "64": "icons/icon-64.png"
@@ -18,15 +18,10 @@
   "background": {
     "scripts": ["background.js"]
   },
-  "permissions": [],
-  "experiment_apis": {
-    "heaExperiment": {
-      "schema": "api/schema.json",
-      "parent": {
-        "scopes": ["addon_parent"],
-        "paths": [["heaExperiment"]],
-        "script": "api/implementation.js"
-      }
+  "permissions": ["compose"],
+  "compose_scripts": [
+    {
+      "js": ["compose_script.js"]
     }
-  }
+  ]
 }
